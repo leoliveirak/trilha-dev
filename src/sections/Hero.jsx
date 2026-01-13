@@ -29,7 +29,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="hero-container">
+    <div className="hero-container" id="hero">
       
       <AnimatedCan currentFlavor={currentFlavor} direction={direction} />
 
