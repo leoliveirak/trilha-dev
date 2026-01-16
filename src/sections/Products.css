@@ -1,0 +1,77 @@
+.products-section {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.products-title {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.2;
+    z-index: 0;
+}
+
+.product-info {
+    z-index: 1;
+    width: 100%;
+}
+
+.product-name {
+    font-family: 'Rubik Iso', cursive;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.product-price span {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #999;
+}
+
+@media (min-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
