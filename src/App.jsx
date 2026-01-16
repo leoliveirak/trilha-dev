@@ -1,10 +1,12 @@
 import './App.css'
+import Navbar from './components/Navbar.jsx'
+import Hero from './sections/Hero.jsx'
 
 function App() {
   return (
     <div>
-       <h1>Minha Landing Page</h1>
-       <p>Projeto Trilha Dev 25.2</p>
+       <Navbar/>
+       <Hero/>
     </div>
   )
 }
