@@ -2,6 +2,7 @@ import './App.css'
 import Navbar from './components/Navbar.jsx'
 import Hero from './sections/Hero.jsx'
 import Marquee from './components/Marquee.jsx'
+import About from './sections/About.jsx'
 
 function App() {
   return (
@@ -11,8 +12,7 @@ function App() {
 
        <Marquee/>
 
-       <div style={{ height: '100vh', background: 'white' }}>
-       </div>
+       <About/>
     </div>
   )
 }
