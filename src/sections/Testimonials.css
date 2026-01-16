@@ -1,0 +1,141 @@
+.testimonials-section {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-family: 'Protest Strike', sans-serif;
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 4rem;
+  text-transform: uppercase;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  background: #f9f9f9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.testimonial-image-side {
+  height: 300px;
+  flex: 1;
+}
+
+.action-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonial-content-side {
+  flex: 1.5;
+  padding: 3rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.quote-icon {
+  font-size: 4rem !important;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.testimonial-quote {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-style: italic;
+  z-index: 1;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.author-info h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  font-family: 'Rubik Iso', cursive;
+}
+
+.author-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.testimonial-card.no-image {
+  text-align: center;
+  height: auto;
+}
+
+.testimonial-card.no-image .testimonial-content-side {
+  align-items: center;
+  text-align: center; 
+  padding: 4rem 3rem;
+}
+
+.testimonial-card.no-image .quote-icon {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+
+.testimonial-card.no-image .testimonial-author {
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .testimonial-card {
+    flex-direction: row; 
+    height: 350px; 
+  }
+
+  .testimonial-image-side {
+    height: auto;
+  }
+  
+  .testimonial-card.no-image {
+    height: auto; 
+    flex-direction: column;
+  }
+}
