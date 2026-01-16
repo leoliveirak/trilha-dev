@@ -5,6 +5,7 @@ import Marquee from './components/Marquee.jsx'
 import About from './sections/About.jsx'
 import Products from './sections/Products.jsx'
 import Testimonials from './sections/Testimonials.jsx'
+import Footer from './sections/Footer.jsx'
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
        <Products/>
 
        <Testimonials/>
+
+       <Footer/>
     </div>
   )
 }
