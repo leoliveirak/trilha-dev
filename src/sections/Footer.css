@@ -1,0 +1,106 @@
+.footer-section {
+    background-color: #111;
+    color: white;
+    padding: 5rem 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+}
+
+.contact-form-area h2 {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.contact-subtitle {
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+}
+
+.form-input, .form-textarea {
+    background: #222;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: #A2E15A;
+    background: #2a2a2a;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-logo {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #A2E15A;
+}
+
+.copyright {
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr;
+    }
+    .footer-info {
+        text-align: right;
+        align-items: flex-end;
+    }
+}
