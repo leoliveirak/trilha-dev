@@ -1,30 +1,60 @@
-import { IconButton } from '@mui/material';
+import { useState } from 'react';
+import { IconButton, Drawer, List, ListItem, ListItemText} from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import MenuIcon from '@mui/icons-material/Menu'; 
+import CloseIcon from '@mui/icons-material/Close';
 
 import './Navbar.css';
 import logo from '../assets/logo.png';
 
 const Navbar = () => {
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileOpen(false);
+  };
+
+  const navItems = [
+    { label: 'Início', id: 'hero' },
+    { label: 'Sobre', id: 'about' },
+    { label: 'Produtos', id: 'products' },
+    { label: 'Depoimentos', id: 'testimonials' },
+    { label: 'Contato', id: 'contact' },
+  ];
+
   return (
-    <nav className="navbar-container">
-      
+    <nav className="navbar-container"> 
       <a href="#hero">
         <img src={logo} alt="FruitX Logo" className="nav-logo" />
       </a>
 
       <ul className="nav-links">
-        <li><a href="#hero">Início</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#products">Produtos</a></li>
-        <li><a href="#testimonials">Depoimentos</a></li>
-        <li><a href="#contact">Contato</a></li>
+        {navItems.map((item) => (
+          <li key={item.id} >
+            <a 
+              href={`#${item.id}`}
+              onClick={(e) => handleNavClick(e, item.id)}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
 
       <div className="nav-icons">
         <div className="menu-icon-mobile">
-            <IconButton sx={{ color: 'white' }}>
+            <IconButton onClick={handleDrawerToggle}sx={{ color: 'white' }}>
                 <MenuIcon />
             </IconButton>
         </div>
@@ -39,6 +69,33 @@ const Navbar = () => {
             </IconButton>
         </div>
       </div>
+
+      <Drawer
+        anchor='right'
+        open={mobileOpen}
+        onClose={handleDrawerToggle}
+        PaperProps={{
+          sx: { width: '250px', backgroundColor: '#111', color: 'white' }
+      }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'flex-end', padding: '1rem' }}>
+          <IconButton onClick={handleDrawerToggle} sx={{color: 'white'}}>
+            <CloseIcon/>
+          </IconButton>
+        </div>
+
+        <List>
+          {navItems.map((item) => (
+            <ListItem
+              key={item.id}
+              button
+              onClick={() => handleNavClick(e, item.id)}
+            >
+              <ListItemText primary={item.label} />
+
+            </ListItem>))}
+        </List>
+      </Drawer>
 
     </nav>
   );

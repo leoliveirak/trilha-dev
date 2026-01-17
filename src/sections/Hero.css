@@ -1,5 +1,5 @@
 .hero-container {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,7 @@
     overflow: hidden;
     position: relative;
     padding-top: 80px;
+    padding-bottom: 1rem;
     transition: background-color 0.8s ease;
   }
 
