@@ -76,7 +76,7 @@ const Hero = () => {
 
       <div className="hero-content">
         <div className="hero-text-area">
-          <h1 className='hero-title'>{currentFlavor.title}</h1>
+          <h1 className={`hero-title ${currentFlavor.id}`}>{currentFlavor.title}</h1>
           <p className='hero-description'>{currentFlavor.description}</p>
           <Button
             variant="contained"
