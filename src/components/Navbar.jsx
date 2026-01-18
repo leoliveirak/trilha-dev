@@ -17,7 +17,9 @@ const Navbar = () => {
   };
 
   const handleNavClick = (e, id) => {
-    e.preventDefault();
+    if (e && e.preventDefault) {
+      e.preventDefault();
+    }
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
