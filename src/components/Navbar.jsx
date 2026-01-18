@@ -91,7 +91,7 @@ const Navbar = () => {
             <ListItem
               key={item.id}
               button
-              onClick={() => handleNavClick(e, item.id)}
+              onClick={(e) => handleNavClick(e, item.id)}
             >
               <ListItemButton>
                 <ListItemText primary={item.label} />
