@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconButton, Drawer, List, ListItem, ListItemText} from '@mui/material';
+import { IconButton, Drawer, List, ListItem, ListItemText, ListItemButton} from '@mui/material';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import MenuIcon from '@mui/icons-material/Menu'; 
@@ -93,7 +93,9 @@ const Navbar = () => {
               button
               onClick={() => handleNavClick(e, item.id)}
             >
-              <ListItemText primary={item.label} />
+              <ListItemButton>
+                <ListItemText primary={item.label} />
+              </ListItemButton>
 
             </ListItem>))}
         </List>
