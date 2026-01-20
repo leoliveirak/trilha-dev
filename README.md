@@ -23,7 +23,7 @@ Landing Page interativa e moderna com animações, desenvolvida para uma marca f
 Para testar o código na sua máquina, basta clonar e rodar os comandos abaixo:
 
 ```bash
-git clone [https://github.com/leoliveirak/trilha-dev.git](https://github.com/leoliveirak/trilha-dev.git)
+git clone https://github.com/leoliveirak/trilha-dev.git
 cd trilha-dev
 npm install
 npm run dev
